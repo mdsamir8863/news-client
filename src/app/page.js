@@ -16,7 +16,7 @@ export default function Home() {
   const fetchNews = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/news/trending?category=${category}`
+        `https://news-api-xypb.onrender.com/api/news/trending?category=${category}`
       );
       dispatch(setNews(data));
     } catch (error) {
